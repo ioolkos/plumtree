@@ -571,7 +571,7 @@ send(Msg, P) ->
     gen_server:cast({?SERVER, P}, Msg).
 
 schedule_lazy_tick() ->
-    schedule_tick(lazy_tick, broadcast_lazy_timer, 1000).
+    schedule_tick(lazy_tick, broadcast_lazy_timer, 30000).
 
 schedule_exchange_tick() ->
     schedule_tick(exchange_tick, broadcast_exchange_timer, 10000).
